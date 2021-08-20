@@ -57,9 +57,9 @@
 				// Upload Image
 				$config['upload_path'] = './assets/images/posts';
 				$config['allowed_types'] = 'gif|jpg|png';
-				$config['max_size'] = '2048';
-				$config['max_width'] = '2000';
-				$config['max_height'] = '2000';
+				$config['max_size'] = '12048';
+				$config['max_width'] = '22000';
+				$config['max_height'] = '22000';
 
 				$this->load->library('upload', $config);
 
@@ -126,6 +126,23 @@
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
 			}
+
+			// Upload Image
+			/*$config['upload_path'] = './assets/images/posts';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size'] = '12048';
+			$config['max_width'] = '22000';
+			$config['max_height'] = '22000';
+
+			$this->load->library('upload', $config);
+
+			if(!$this->upload->do_upload()){
+				$errors = array('error' => $this->upload->display_errors());
+				$post_image = 'noimage.jpg';
+			} else {
+				$data = array('upload_data' => $this->upload->data());
+				$post_image = $_FILES['userfile']['name'];
+			}*/
 
 			$this->post_model->update_post();
 
