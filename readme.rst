@@ -36,7 +36,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB;
 
 CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `comments` (
 ) ENGINE=InnoDB;
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `zipcode` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
